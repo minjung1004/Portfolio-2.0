@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "ejs index.ejs > build/index.html && cp -R public/* build/"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
     "aws-cdk": "^2.160.0",
     "aws-cdk-lib": "^2.160.0",
     "constructs": "^10.3.0",
+    "ejs-cli": "^2.2.3",
     "esbuild": "^0.24.0",
     "nodemon": "^3.1.7",
     "tsx": "^4.19.1",
