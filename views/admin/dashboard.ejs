@@ -1,0 +1,59 @@
+<div class="admin-title">
+    <h1>Dashboard ;&#41</h1>
+    <a href="/add-post" >
+        <button class="add-btn">+ Add New</button>
+    </a>
+</div>
+
+
+<section class="section" id="experiences" aria-label="Experiences">
+    <h2>Experiences</h2>
+    <ul class="experience-title">
+        <% data.filter(post=> post.topic === "Experience").forEach(post=> { %>
+        <li>
+            <div class="admin-grid-container">
+                <div class="admin-description">                        
+                    <span class="list-title"><%= post.title %></span>
+                    <span class="list-date"><%= post.startDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})%> - <%= post.endDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) %></span>
+                </div>
+                        
+                <div class="admin-post-controls">
+                    <a href="/edit-post/<%= post.id %>">
+                        <button class="edit-btn">Edit</button></a>
+        
+                    <form action="/delete-post/<%= post.id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete" class="delete-btn">
+                    </form>
+                </div>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+</section>
+    
+<section class="section" id="projects" aria-label="Projects">
+    <h2>Projects</h2>
+    <ul class="project-title">
+        <% data.filter(post => post.topic === "Project").forEach(post=> { %>
+        <li>
+            <div class="admin-grid-container">
+                <div class="admin-description">
+                    <span class="list-title"><%= post.title %></span>
+                    <span class="list-date"><%= post.startDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})%> - <%= post.endDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) %></span>
+                </div>
+                                            
+                <div class="admin-post-controls">
+                    <a href="/edit-post/<%= post.id %>">
+                        <button class="edit-btn">Edit</button></a>
+        
+                    <form action="/delete-post/<%= post.id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete" class="delete-btn">
+                    </form>
+                </div>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+</section>
+
+

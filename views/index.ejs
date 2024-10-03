@@ -1,0 +1,54 @@
+<section class="section"  id="about" aria-label="About Me">
+    <h2>About</h2>
+    <p>Hello! My name is Min Jung, and I am a recent Computer Science graduate from California Polytechnic State University, Pomona. 
+        I am currently seeking an entry-level software engineer position, with a strong interest in Full-Stack web development and 
+        an emerging curiosity for cybersecurity.
+    </p>
+
+    <p>During my time as a student, I was actively involved in the computer science club, sheCodes, where I held various 
+        leadership roles, including Treasurer, External Vice-President, and President. My goals align with the club's motto of 
+        "Community, Outreach, and Growth", which helped me grow both professionally and personally.
+    </p>
+        
+    <p>When I'm not coding, I enjoy spending time with friends, reading manga and webtoons, drawing and painting, 
+        walking around my neighborhood to spot cats, or simply catching up on sleep.
+    </p>
+</section>
+
+<section class="section" id="experiences" aria-label="Experiences">
+    <h2>Experiences</h2>
+    <ul class="experience-title">
+        <% data.filter(experience => experience.topic === "Experience").forEach(experience => { %>
+        <li>
+            <div class="grid-container">
+                <span class="list-date"><%= experience.startDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})%> - <%= experience.endDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) %></span>
+                <span class="list-title"><%= experience.title %></span>
+                <span></span>
+                <span class="list-content"><%= experience.content %></span>    
+            </div>
+        </li>
+            
+        <% }) %>
+    </ul>
+
+    <!-- <a href="#" class="pagination">View More</a> -->
+</section>
+
+<section class="section" id="projects" aria-label="Projects">
+    <h2>Projects</h2>
+    <ul class="project-title">
+        <% data.filter(project => project.topic === "Project").forEach(project=> { %>
+        <li>
+            <div class="grid-container">
+                <span class="list-date"><%= project.startDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})%> - <%= project.endDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) %></span>
+                <span class="list-title"><%= project.title %></span>
+                <span></span>
+                <span class="list-content"><%= project.content %></span>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+
+
+    <!-- <a href="#" class="pagination">View More</a> -->
+</section>
