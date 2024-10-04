@@ -13,7 +13,7 @@ router.get('', async (req, res) => {
     try {
         const data = await Post.find();
         res.render('index', {locals, data});
-    } catch (eror) {
+    } catch (error) {
         console.log(error); 
     }
 });
