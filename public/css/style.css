@@ -108,8 +108,6 @@ body {
         display: grid;
         grid-template-columns: 30% 70%;
         padding-bottom: 1rem;
-        padding-right: 1.5rem;
-        overflow:scroll; 
     }
 
     .admin-grid-container{
@@ -124,8 +122,8 @@ body {
 
 @media (max-width: 850px) {
     .grid-container{
-        display: grid;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
         padding-bottom: 1rem;
     }
 }
@@ -134,6 +132,7 @@ body {
     color: rgba(255, 255, 255, 0.736);
     font-size: medium;
     padding-bottom: 0.5rem;
+    padding-right: 1rem;
 }
 
 .list-title{
@@ -154,14 +153,14 @@ body {
 
 .list-link a{
     text-decoration: none;
-    color: white;
+    font-style: italic;
+    color: #CA6501;
     padding-bottom: 1rem;
 }
 
 .list-link a:hover {
-    color: #CA6501;
+    color: white;
 }
-
 
 ul,li{
     list-style: none;
@@ -239,16 +238,11 @@ footer{
     position: relative;
     height: 60px;
     margin-top: auto;
-    
 }
 
 .admin-btn {
     text-decoration: none;
     color: inherit;
-    /* position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 1rem; */
 }
 
 .admin-btn:hover{
@@ -259,7 +253,8 @@ footer{
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    /* padding-right: 4rem; */
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
 }
 
 .list-keyword li {
