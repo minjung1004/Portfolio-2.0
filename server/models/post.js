@@ -21,6 +21,14 @@ const PostScheme = new Scheme({
     endDate: {
         type: Date,
         required: false
+    },
+    linkTitle: {
+        type: String,
+        required: false
+    },
+    link: {
+        type: String,
+        required: false
     }
 });
 

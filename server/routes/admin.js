@@ -96,7 +96,9 @@ router.post('/add-post', authMiddleware, async (req, res) => {
                 title: req.body.title,
                 content: req.body.content,
                 startDate: convertMMYYYYToDate(req.body.startDate),
-                endDate: convertMMYYYYToDate(req.body.endDate)
+                endDate: convertMMYYYYToDate(req.body.endDate),
+                linkTitle: req.body.linkTitle,
+                link: req.body.link,
             });
             await Post.create(newPost);
             res.redirect('/dashboard');
@@ -123,7 +125,9 @@ router.get('/edit-post/:id', authMiddleware, async (req, res) => {
                 title: data.title,
                 content: data.content,
                 startDate: formatDateToMMYYYY(new Date(data.startDate)),
-                endDate: formatDateToMMYYYY(new Date(data.endDate))
+                endDate: formatDateToMMYYYY(new Date(data.endDate)),
+                linkTitle: data.linkTitle,
+                link: data.link,
             }, layout: adminLayout, locals
         });
     } catch(error){
@@ -139,7 +143,9 @@ router.put('/edit-post/:id', authMiddleware, async (req, res) => {
             title: req.body.title,
             content: req.body.content,
             startDate: convertMMYYYYToDate(req.body.startDate),
-            endDate: convertMMYYYYToDate(req.body.endDate)
+            endDate: convertMMYYYYToDate(req.body.endDate),
+            linkTitle: req.body.linkTitle,
+            link: req.body.link
       });
       res.redirect('/dashboard');
     } catch (error) {

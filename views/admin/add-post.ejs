@@ -4,7 +4,7 @@
 </div>
 
 <form action="/add-post" method="POST">
-    <label for="topic"><b>Topic</b></label>
+    <label class="req-label" for="topic"><b>Topic</b></label>
     <div>
         <!-- <input type="radio" name="topic" value="About"/>
         <label for="About">About</label> -->
@@ -16,13 +16,19 @@
         <label for="Project">Project</label>
     </div>
 
-    <label for="title"><b>Title</b></label>
+    <label class="req-label" for="title"><b>Title</b></label>
     <input type="text" placeholder="Post Title" name="title">
 
-    <label for="content"><b>Content</b></label>
-    <textarea name="content" cols="50" rows="10"></textarea>
+    <label class="req-label" for="content"><b>Content</b></label>
+    <textarea class="text-area" name="content" cols="50" rows="10"></textarea>
 
-    <label for="startDate">Start Date (MM-YYYY):</label>
+    <label for="linkTitle"><b>Link Title</b></label>
+    <input type="text" placeholder="Post Link Title" name="linkTitle">
+
+    <label for="link"><b>Link</b></label>
+    <input type="text" placeholder="Post Link" name="link">
+
+    <label class="req-label" for="startDate">Start Date (MM-YYYY):</label>
     <input type="text" id="startDate" name="startDate" placeholder="MM-YYYY" pattern="^(0[1-9]|1[0-2])-\d{4}$" required>
     
     <label for="endDate">End Date (MM-YYYY):</label>

@@ -67,15 +67,6 @@ body {
         margin-bottom: .5rem;
         max-width: 75%;
     }
-
-    /* .submit-btn{
-        background-color: #CA6501;
-        margin-top: 2rem;
-        border-style: none;
-        font-weight: bold;
-        font-size: medium;
-        max-width: 78%;
-    } */
 }
 
 @media (max-width: 1024px) {
@@ -116,8 +107,8 @@ body {
     .grid-container{
         display: grid;
         grid-template-columns: 30% 70%;
-        padding-left: 1rem;
         padding-bottom: 1rem;
+        padding-left: 1.5rem;
     }
 
     .admin-grid-container{
@@ -125,10 +116,7 @@ body {
         grid-template-columns: auto auto;
         justify-content: space-between;
     }
-    .admin-description{
-        display: flex;
-        flex-direction: column;
-    }
+ 
    
     
 }
@@ -137,7 +125,6 @@ body {
     .grid-container{
         display: grid;
         grid-template-columns: auto;
-        padding-left: 1rem;
         padding-bottom: 1rem;
     }
 }
@@ -145,11 +132,33 @@ body {
 .list-date{
     color: rgba(255, 255, 255, 0.736);
     font-size: medium;
+    padding-bottom: 0.5rem;
 }
 
 .list-title{
     font-size: large;
     font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+.list-content{
+    padding-bottom: 0.5rem;
+}
+
+.list-link a:not(:empty)::before {
+    content: "\261B";
+    padding-right: 0.5rem;
+    color: white;
+}
+
+.list-link a{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.list-link a:hover {
+    color: #CA6501;
 }
 
 ul,li{
@@ -182,6 +191,11 @@ label{
     gap: 1rem;
 }
 
+.admin-description{
+    display: flex;
+    flex-direction: column;
+}
+
 .edit-btn, .delete-btn, .logout-btn, .add-btn, .submit-btn, .back-btn{
     margin-top: 1rem;
     border-style: none;
@@ -211,6 +225,7 @@ label{
 .text-area {
     border-radius: 1rem;
     padding: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .req-label::after{

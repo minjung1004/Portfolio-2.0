@@ -22,13 +22,19 @@
         <label for="Project">Project</label>
     </div>
 
-    <label class="req-label"  for="title"><b>Title</b></label>
+    <label class="req-label" for="title"><b>Title</b></label>
     <input type="text" placeholder="Post Title" name="title" value="<%= data.title %>">
 
-    <label class="req-label"  for="content"><b>Content</b></label>
+    <label class="req-label" for="content"><b>Content</b></label>
     <textarea class="text-area" name="content" cols="20" rows="10"><%= data.content %></textarea>
 
-    <label class="req-label"  for="startDate"><b>Start Date (MM-YYYY):</b></label>
+    <label for="linkTitle"><b>Link Title</b></label>
+    <input type="text" placeholder="Post Link Title" name="linkTitle" value="<%= data.linkTitle %>">
+
+    <label for="link"><b>Link</b></label>
+    <input type="text" placeholder="Post Link" name="link" value="<%= data.link %>">
+
+    <label class="req-label" for="startDate"><b>Start Date (MM-YYYY):</b></label>
     <input type="text" name="startDate" placeholder="MM-YYYY" pattern="^(0[1-9]|1[0-2])-\d{4}$" required value="<%= data.startDate %>">
     
     <label for="endDate"><b>End Date (MM-YYYY):</b></label>

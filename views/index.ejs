@@ -18,26 +18,31 @@
 <section class="section" id="experiences" aria-label="Experiences">
     <h2>Experiences</h2>
     <ul class="experience-title">
-        <% data.filter(experience => experience.topic === "Experience").forEach(experience => { %>
+        <% data
+        .filter(experience => experience.topic === "Experience")
+        .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+        .forEach(experience => { %>
+       
         <li>
             <div class="grid-container">
                 <span class="list-date"><%= experience.startDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})%> - <%= experience.endDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) %></span>
                 <span class="list-title"><%= experience.title %></span>
                 <span></span>
-                <span class="list-content"><%= experience.content %></span>    
+                <span class="list-content"><%= experience.content %></span>   
+                <span></span>
+                <span class="list-link"><a href="<%= experience.link %>"><%= experience.linkTitle %></a></span> 
             </div>
-        </li>
-            
+        </li>   
         <% }) %>
     </ul>
-
-    <!-- <a href="#" class="pagination">View More</a> -->
 </section>
 
 <section class="section" id="projects" aria-label="Projects">
     <h2>Projects</h2>
     <ul class="project-title">
-        <% data.filter(project => project.topic === "Project").forEach(project=> { %>
+        <% data.filter(project => project.topic === "Project")
+        .sort((a, b) => new Date(b.startDate) - new Date(a.startDate)) 
+        .forEach(project => { %>
         <li>
             <div class="grid-container">
                 <span class="list-date"><%= project.startDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})%> - <%= project.endDate.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) %></span>
@@ -48,7 +53,4 @@
         </li>
         <% }) %>
     </ul>
-
-
-    <!-- <a href="#" class="pagination">View More</a> -->
 </section>
