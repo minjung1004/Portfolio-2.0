@@ -9,7 +9,9 @@
 <section class="section" id="experiences" aria-label="Experiences">
     <h2>Experiences</h2>
     <ul class="experience-title">
-        <% data.filter(post=> post.topic === "Experience").forEach(post=> { %>
+        <% data.filter(post => post.topic === "Experience")
+        .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+        .forEach(post => { %>
         <li>
             <div class="admin-grid-container">
                 <div class="admin-description">                        
@@ -34,7 +36,9 @@
 <section class="section" id="projects" aria-label="Projects">
     <h2>Projects</h2>
     <ul class="project-title">
-        <% data.filter(post => post.topic === "Project").forEach(post=> { %>
+        <% data.filter(post => post.topic === "Project")
+        .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+        .forEach(post => { %>
         <li>
             <div class="admin-grid-container">
                 <div class="admin-description">
