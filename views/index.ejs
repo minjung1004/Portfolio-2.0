@@ -31,6 +31,16 @@
                 <span class="list-content"><%= experience.content %></span>   
                 <span></span>
                 <span class="list-link"><a href="<%= experience.link %>"><%= experience.linkTitle %></a></span> 
+                <span></span>
+                <span class="list-keyword">
+                    <% if (experience.keyword) { %>
+                        <ul>
+                            <% experience.keyword.split(',').forEach(function(item) { %>
+                                <li><%= item.trim() %></li> 
+                            <% }) %>
+                        </ul>
+                    <% } %>
+                </span>
             </div>
         </li>   
         <% }) %>
@@ -49,6 +59,16 @@
                 <span class="list-title"><%= project.title %></span>
                 <span></span>
                 <span class="list-content"><%= project.content %></span>
+                <span></span>
+                <span class="list-keyword">
+                    <% if (project.keyword) { %>
+                        <ul>
+                            <% project.keyword.split(',').forEach(function(item) { %>
+                                <li><%= item.trim() %></li> 
+                            <% }) %>
+                        </ul>
+                    <% } %>
+                </span>
             </div>
         </li>
         <% }) %>

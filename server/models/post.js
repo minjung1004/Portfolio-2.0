@@ -29,6 +29,10 @@ const PostScheme = new Scheme({
     link: {
         type: String,
         required: false
+    },
+    keyword: {
+        type: String,
+        required: false
     }
 });
 

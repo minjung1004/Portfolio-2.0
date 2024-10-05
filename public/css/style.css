@@ -108,7 +108,8 @@ body {
         display: grid;
         grid-template-columns: 30% 70%;
         padding-bottom: 1rem;
-        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        overflow:scroll; 
     }
 
     .admin-grid-container{
@@ -141,7 +142,7 @@ body {
     padding-bottom: 0.5rem;
 }
 
-.list-content{
+.list-content, .list-link{
     padding-bottom: 0.5rem;
 }
 
@@ -160,6 +161,7 @@ body {
 .list-link a:hover {
     color: #CA6501;
 }
+
 
 ul,li{
     list-style: none;
@@ -251,4 +253,19 @@ footer{
 
 .admin-btn:hover{
     color:#CA6501;
+}
+
+.list-keyword ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    /* padding-right: 4rem; */
+}
+
+.list-keyword li {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    border-color: #CA6501;
+    border-style: solid;
+    max-height: min-content;
 }
