@@ -17,6 +17,7 @@ Deployed on Render.
 
 ## Demo 
 Click on the video to start.
+<br>
 [![Video Demo](https://img.youtube.com/vi/UD8WJU7c518/0.jpg)](https://youtu.be/UD8WJU7c518)
 
 
