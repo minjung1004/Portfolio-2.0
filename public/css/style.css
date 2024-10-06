@@ -180,6 +180,10 @@ ul,li{
     padding-left: 1rem;
 }
 
+.social-link a:hover svg {
+    fill: white;
+}
+
 form{
     display: flex;
     flex-direction: column;
