@@ -18,13 +18,14 @@ body {
         top: 0;
         max-height: 100vh;
         width: 50%;
+        display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     h1{
         font-size: 4rem;
         margin-block-start: 0;
+        margin: 0;
     }
     
     main{
@@ -100,7 +101,7 @@ body {
         justify-content: space-between;
     }
 
-   
+  
 }
 
 @media (min-width: 750px){
@@ -115,9 +116,6 @@ body {
         grid-template-columns: auto auto;
         justify-content: space-between;
     }
- 
-   
-    
 }
 
 @media (max-width: 850px) {
@@ -173,6 +171,7 @@ ul,li{
     list-style: none;
     gap: 10%;
     padding-inline-start: 0;
+    padding-left: 1rem;
 }
 
 form{
@@ -263,4 +262,16 @@ footer{
     border-color: #CA6501;
     border-style: solid;
     max-height: min-content;
+}
+
+.top-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-btn{
+    display: flex;
+    gap: 2rem;
+    
 }

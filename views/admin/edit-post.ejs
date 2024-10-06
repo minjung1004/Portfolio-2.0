@@ -1,15 +1,21 @@
-<a href="/dashboard">
-    <button class="back-btn">
-        &larr; Back
-    </button>
-</a>
-
-<div class="admin-title">
-    <h2>Edit Post :&#41</h2>
-
+<div class="top-btn">
+    <a href="/dashboard">
+        <button class="back-btn">
+            &larr; Back
+        </button>
+    </a>
     <form action="/delete-post/<%= data._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" class="delete-btn">
     </form>
+
+</div>
+
+
+<div class="admin-title">
+
+    <h1>Edit Post :&#41;</h1>
+
+    
 </div>
 
 <form action="/edit-post/<%= data._id %>?_method=PUT" method="POST">
