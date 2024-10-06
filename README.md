@@ -1,5 +1,5 @@
 # Portfolio-2.0
-This is a full-stack web application that showcases my personal portfolio, developed using Node.js, Express, and MongoDB.
+This is a full-stack web application that showcases my personal portfolio.
 
 ## Final Product
 Deployed on Render.
