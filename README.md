@@ -16,6 +16,7 @@ Deployed on Render.
 [View the Portfolio 2.0 Figma Prototype](https://www.figma.com/proto/QegfTVMDlPVclDoEGz9TUD/Portfolio-2.0?node-id=0-1&t=Rxt70i25D3GV3qpx-1)
 
 ## Demo 
+Click on the video to start.
 [![Video Demo](https://img.youtube.com/vi/UD8WJU7c518/0.jpg)](https://youtu.be/UD8WJU7c518)
 
 
